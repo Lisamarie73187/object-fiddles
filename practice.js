@@ -4,11 +4,17 @@
 //       * Refresh the page to rerun all specs, or click a spec to run it and its children (if any)
 
 
-//Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
+//Create an object called me. Give it a key of name with the value being your name, 
+//and another key of age with the value being your age. 
+//Then alert your name using dot notation.
 
   //Code here
 
-
+var me = {
+  name: 'Lisa',
+  age: '30'
+}
+// alert(me.name)
 
 
 
@@ -18,27 +24,39 @@
 
 
 
-//Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
+//Make a 'favoriteThings' object that contains the following 
+//keys: band, food, person, book, movie, holiday. 
+//Have the values to those keys be your favorite thing in that category.
 
-  //Code here
-
-
-
-
-
-
-
-//After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
-
-  //Code here
-
+var favoriteThings = {
+  band: 'Celine Dion',
+  food: 'Pizza',
+  book: 'Cat in the Hat',
+  person: 'Me',
+  movie: 'Die Hard',
+  holiday: 'Christmas'
+}
 
 
 
 
-//Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
+//After you've made your object, add another key named 'car' with 
+//the value being your favorite car and then another key named 
+//'brand' with the value being your favorite brand.
 
-  //Code here
+favoriteThings.car = 'Honda'
+favoriteThings.brand = 'Whole Foods'
+
+
+
+
+
+//Now change the value of the food key in your favoriteThings 
+//object to be 'Chicken Nuggets' and change the value of the book key in your 
+//favoriteThings object to be 'Harry Potter'.
+
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
 
 
 
@@ -46,7 +64,14 @@
 
 //NEXT PROBLEM
 
+var backPack = {}
 
+var item = 'firstPocket'
+
+backPack['item'] = 'firstPocket'
+backPack['firstPocket'] = 'chapstick'
+
+console.log(backPack)
 
 /* 
 Create an empty Object called backPack. Now, create a variable called 'item'
@@ -54,9 +79,14 @@ and set it equal to the string 'firstPocket'. Using bracket notation,
 add a 'firstPocket' key (or property) to backPack, using 'item'.
 Set the value of that key to 'chapstick'.
 
+
+
 Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. 
 */
+
+backPack.color = 'red'
+
 
   //Code here
 
@@ -67,9 +97,11 @@ that is named color, with the value being the color of your backpack.
 
 //After you do the above, alert your entire backPack object.
 
+//alert(backPack)
+
   //Code here
 
- 
+ console.log(backPack)
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -99,7 +131,10 @@ var user2 = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+  user2.name = 'Tyler S. McGinnis'
+  user2.email = 'tyler.mcginnis@devmounta.in'
+
+
 
 
 
@@ -121,9 +156,10 @@ var user2 = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+var methodCollection = {}
 
-
+methodCollection.alertHello = function(){alert('hello')}
+methodCollection.logHello = function(){console.log('hello')}
 
 
 /*
@@ -156,7 +192,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called makePerson which takes in name, birthday, ssn as its
 // parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
+function makePerson(name,birthday,ssn){
+ let person = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
+  return person
+}
 
 
 
@@ -169,8 +212,19 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 
 
-// Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
+// Create a function called makeCard which takes in cardNumber, 
+//expirationDate, and securityCode to make a Credit Card object 
+//and returns that object so that whenever you invoke makeCard, 
+//you get a brand new credit card.
 
-  //Code Here
+function makeCard(cardNum,expDate,secCode){
+  let creditCard = {
+    cardNum: cardNum,
+    expDate: expDate,
+    secCode: secCode
+  }
+  return creditCard
+}
 
 
+console.log(makeCard(112323,'11/21',12312312))
